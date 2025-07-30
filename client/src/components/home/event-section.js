@@ -1,0 +1,53 @@
+import '../../css/components-style/home/event-section.scss';
+import img from '../../images/banner/hero_1.jpg';
+import { useState } from 'react';
+
+
+const EventCard = (prop) => {
+    const [more, setMore] = useState(false);
+    const toggleShowMore = () => setMore((state) => !state) 
+   
+    let eventTitle = prop.title;
+    let eventImg = prop.img;
+    let eventAddress = prop.address;
+    let eventDescription = prop.desc;
+    let eventDate = prop.date;
+    let eventTime = prop.time;
+
+    const preview = eventDescription ? eventDescription.slice(0, 150) : '';
+
+    return (
+        <>
+            
+            <div className="event-container">
+                <img src={eventImg}></img>
+
+                <div className="event-overlay">
+                    <h1 className="event-title">{eventTitle}</h1>
+                    <p className="event-location">{eventAddress}</p>
+
+                    <hr></hr>
+
+                    <p className="event-description">
+                        {more ? eventDescription : `${preview} ...`} 
+                        {eventDescription.length > 150 && (
+                            <span onClick={toggleShowMore} style={{ cursor: 'pointer', color: 'blue' }}>
+                            {more ? ' show less' : ' show more'}
+                            </span>
+                        )}
+                    </p>
+                    <p className="event-date">{`${eventDate} | ${eventTime}`}</p>  
+
+                    <div className="event-btns">
+                        <button>Go</button>
+                        <button>View More</button>
+                    </div>  
+                </div>
+
+            </div>
+       
+        </>
+    )
+}
+
+export default EventCard;

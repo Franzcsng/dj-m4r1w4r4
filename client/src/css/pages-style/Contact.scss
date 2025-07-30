@@ -1,0 +1,164 @@
+@import '../variables.scss';
+
+.contact-main{
+    width: 100%;
+    height: 100vh;
+    background-color: $background;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 140px;
+    position: relative;
+    overflow: hidden;
+
+    #contact-bg{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+    .contact-section{
+        position: relative;
+        width: 70%;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        flex-direction: row;
+
+        .contact-box{
+            width: 100%;
+            flex: 2;
+            height: 500px;
+            background-color: $text-accent;
+            margin-inline: 10px;
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+
+               h2{
+                    width: 80%;
+                    font-size: 70px;
+                    margin: 30px auto 0 auto;
+                    color: $background;
+                }
+
+                p{
+                    font-size: 20px;
+                    width: 80%;
+                    margin: 10px auto 0 auto;
+                    color: $background;
+                }
+        }
+
+        .socials-container{
+            width: 100%;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+
+            .social{
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                width: 100%;
+                height: 100px;
+                background-color: $text-accent;
+                border-radius: 15px;
+                margin-bottom: 20px;
+                margin-inline: 10px;
+                box-shadow: 0 0 10px rgb(56, 56, 56);
+
+                .icon{
+                    width: 60px;
+                    color: $background;
+                    margin: 15px;
+                }
+               
+                p{
+                    font-size: 25px;
+                    color: $background;
+                    font-weight: bold;
+                    margin: 15px;
+
+                }
+            }
+        }
+
+    }
+
+}
+
+  @media only screen and (max-width: 840px) {
+
+        .contact-main{
+            padding-top: 100px;
+
+
+            .contact-section{
+            width: 90%;
+            height: auto;
+            flex-direction: column ;
+            
+
+            .contact-box{
+                margin-inline: 0px ;
+                width: 100%;
+                height: 400px;
+                flex: none;
+
+                h2{
+                    font-size: 60px;
+                }
+
+                p{
+                    font-size: 16px;
+                }
+
+            }
+
+            .socials-container{
+                justify-content: space-between;
+                width: 100%;
+                margin-top: 20px;
+                flex: none;
+                flex-direction: row ;
+
+                .social{
+                    margin: 0px ;
+                    width: 32%;
+                    height: 120px;
+
+                    .icon{
+                        width: 80px;
+            }
+                    p{
+                        display: none;
+                    }
+                }
+            }
+        }
+        }
+
+  }
+
+
+    @media only screen and (max-width: 450px) {
+
+        .contact-main{
+            .contact-section{
+                .contact-box{
+                    h2{
+                        font-size: 40px;
+                    }
+
+                    p{
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }

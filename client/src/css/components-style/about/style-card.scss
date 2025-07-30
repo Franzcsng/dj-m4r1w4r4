@@ -1,0 +1,21 @@
+@import '../../variables.scss';
+
+.style-card{
+    width: 25%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-inline: 20px;
+    background-color: $text-accent;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin: 10px;
+    border-radius: 10px;
+
+    h2{
+        color: $background;
+        font-size: 30px;
+        margin: 0;
+    }
+
+}

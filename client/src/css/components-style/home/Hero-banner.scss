@@ -1,0 +1,147 @@
+
+
+.hero-banner{
+    position: relative;
+    width: 100%;
+    height: 700px;
+    margin: 0;
+    background-color: orangered;
+    overflow: hidden;
+
+    .hero-img{
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+   
+
+    .hero-overlay{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.266);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+
+    .hero-overlay-container{
+        position: relative;
+        display: flex;
+        width: 100%;
+        height: 100%;
+
+         .dj-name{
+            font-size: 11vw;
+            color: white;
+            margin-top: 250px;
+            margin-left: 10%;
+            width: fit-content;
+            text-shadow:
+            0 0 7px #fff,
+            0 0 12px rgb(230, 251, 4),
+            0 0 22px rgb(251, 148, 4),
+            0 0 32px rgb(230, 251, 4),
+        }
+
+        img{
+            position: absolute;
+            height: 640px;
+            object-fit: cover;
+            right:  20px;
+            bottom: 0;
+        }
+
+        
+    }
+    
+    .dj-info{
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            bottom: 50px;
+            left: 10%;
+            margin-right: 14%;
+            max-width: 600px;
+
+
+            h1{
+                color: white;
+                font-size: 32px;
+                margin: 0px 0px 20px 0px;
+                text-shadow: 0 0 10px #000000;
+            }
+
+            p{
+                color: white;
+                font-size: 16px;
+                margin: 0px;
+                text-shadow: 0 0 10px #000000;
+            }
+
+            button{
+                width: 170px;
+                height: 40px;
+                border-radius: 20px;
+                border: none;
+                margin-top: 30px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                font-size: 16px;
+                padding-left: 30px;
+                transition: 0.2s;
+                cursor: pointer;
+
+                div{
+                    height: 30px;
+                    width: 30px;
+                    background-color: rgb(57, 6, 6);
+                    border-radius: 50%;
+                }
+
+                &:hover{
+                    background-color: rgb(255, 252, 206);
+                    color: rgb(21, 16, 16);
+                    font-weight: bold;
+                }
+            }
+        }
+    
+    }
+}
+
+
+   @media only screen and (max-width: 767px) {
+        .hero-banner{
+
+             .hero-overlay{
+
+                .hero-overlay-container{
+                
+                    .dj-name{
+                        font-size: 70px;
+                        color: white;
+                        margin-top: 100px;
+                        margin-left: 10%;
+                        }
+
+                    img{
+                        max-height: 640px;
+                        }
+
+                         .dj-info{
+
+                                h1{
+                                    font-size: 24px;
+                                }
+
+                                p{
+                                    font-size: 14px;
+                                }
+
+                            }
+                        }
+            }
+        }
+    }
