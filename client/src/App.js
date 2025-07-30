@@ -12,6 +12,7 @@ import MainLayout  from './pages/main-layout.js';
 import Home from './pages/Home.js';
 import About from './pages/About.js';
 import Contact from './pages/Contact.js';
+import Mixes from './pages/Mixes.js';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
