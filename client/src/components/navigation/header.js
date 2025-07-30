@@ -21,7 +21,7 @@ import {NavLink} from 'react-router-dom';
                 <NavLink to="/">home</NavLink>
                 <NavLink to="/about">about</NavLink>
                 <NavLink to="/contact">contact</NavLink>
-                <NavLink to="/hi">mixes</NavLink>
+                <NavLink to="/mixes">mixes</NavLink>
                 <NavLink to="/hi">events</NavLink>
                
             </ul>

@@ -1,10 +1,11 @@
-import '../css/pages-style/Mixes.js'
+import '../css/pages-style/Mixes.scss'
+import MixHero from '../components/mixes/mix-hero.js'
 
 
 const Mixes = () => {
     return (
-        <div>
-
+        <div className='mixes-main'>
+            <MixHero/>
         </div>
     )
 }
