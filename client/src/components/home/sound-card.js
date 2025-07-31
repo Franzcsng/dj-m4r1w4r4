@@ -16,8 +16,9 @@ function SoundCard(prop) {
         soundSrc, 
         title: eventTitle, 
         date: eventDate, 
-        address: 
-        eventAddress 
+        address: eventAddress,
+        className='', 
+
     } = prop;
 
     useEffect(() => {
@@ -109,7 +110,7 @@ function SoundCard(prop) {
 
     return (
         
-        <div className="sound-card-main">
+        <div className={`sound-card-main ${className}`}>
             <img src={soundBg} alt='mix-bg' />
 
             <div className='sound-overlay'>

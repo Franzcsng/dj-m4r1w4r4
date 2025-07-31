@@ -5,10 +5,16 @@
     box-shadow: 0 0 10px rgb(163, 163, 163);
     min-height: 320px;
     max-height: 320px;
+    width: 250px;
     min-width: 250px;
     margin: 10px 20px 10px 20px;
     transition: 0.5s;
     overflow: hidden;
+
+//mix-card style
+    &.mix-card{
+      
+    }
 
     img{
             position: absolute;

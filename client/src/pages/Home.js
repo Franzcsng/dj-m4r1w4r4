@@ -48,8 +48,8 @@ function Home(){
                         soundSrc='/sample.mp3' 
                         title='Crazy Times' 
                         address='Aces Bar' 
-                        date='June 2, 2022'/>
-                        
+                        date='June 2, 2022'
+                        />
                     ))}
                 </div>
 
