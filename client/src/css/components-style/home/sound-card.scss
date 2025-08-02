@@ -1,20 +1,16 @@
+@import '../../variables.scss';
+
 .sound-card-main{
     position: relative;
     background-color: rgb(254, 250, 222);
     border-radius: 20px;
     box-shadow: 0 0 10px rgb(163, 163, 163);
-    min-height: 320px;
-    max-height: 320px;
-    width: 250px;
-    min-width: 250px;
+    min-height: 280px;
+    max-height: 280px;
+    min-width: 220px;
     margin: 10px 20px 10px 20px;
     transition: 0.5s;
     overflow: hidden;
-
-//mix-card style
-    &.mix-card{
-      
-    }
 
     img{
             position: absolute;
@@ -55,7 +51,7 @@
             margin-inline: auto;
             margin-top: 5px;
             margin-bottom: 0;
-            font-size: 30px;
+            font-size: 25px;
             text-align: center;
         }
 
@@ -102,8 +98,77 @@
 
     &:hover{
         min-height: 330px;
-        min-width: 260px;
+        min-width: 265px;
         box-shadow: 0 0 20px rgb(163, 163, 163);
     }
 }
 
+#mix-card{
+        min-width: 330px;
+        min-height: 420px;
+
+        img{
+            width: 100%;
+        }
+
+        .sound-overlay{
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.632);
+            p{
+                font-size: 50px;
+                width: 50px;
+                float: right;
+                text-align: right;
+                color: $text-accent;
+                font-weight: bold;
+                margin-inline: no0ne;
+            }   
+
+            #mix-details{
+                margin-top: 5px;
+                font-size: 20px;
+                width: 80%;
+                text-align: left;
+                color: $accent;
+            }
+            h3{
+                width: 80%;
+                color: white;
+                margin-top: 100px;
+                margin-bottom: 0;
+                font-size: 30px;
+                text-align: left;
+            }
+        }
+
+        .sound-controls-container{
+            justify-content: center;
+
+            
+
+            .play-btn{
+            width: 160px;
+            height: 50px;
+            background-color: $accent;
+            border-radius: 30px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+
+            p{
+                font-size: 25px;
+                margin-top: 0;
+                margin-bottom: 0;
+                
+            }
+
+            .sound-btn{
+                width: 30px;
+                height: 30px;
+                margin: 0;
+            }
+        }
+        }
+        
+    }

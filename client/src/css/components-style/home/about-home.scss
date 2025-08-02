@@ -1,7 +1,7 @@
 @import "../../variables.scss";
 
 .about-home-card{
-    width: 80%;
+    width: 70%;
     margin-top: 20px;
     display: flex;
     flex-wrap: wrap;
@@ -17,6 +17,9 @@
 
     .about-home-text{
         flex: 1;
+        P{
+            font-size: 20px;
+        }
 
         h1, p{
            margin: 30px 40px 30px 40px; 

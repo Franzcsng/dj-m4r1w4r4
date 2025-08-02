@@ -18,7 +18,9 @@ const MixHero = () => {
                     </p>
                 </div>
                 <SoundCard
-                className='mix-card'
+                    head='Latest Mix'
+                    title='Fright Night'
+                    id='mix-card'
                 />
             </div>
             

@@ -18,11 +18,11 @@ function Home(){
     };
     const [eventList, setEventList] = useState([]);
 
-    useEffect(() =>{
-        axios.get("http://localhost:3001/events").then((response) =>{
-            setEventList(response.data)
-        })
-    })
+    // useEffect(() =>{
+    //     axios.get("http://localhost:3001/events").then((response) =>{
+    //         setEventList(response.data)
+    //     })
+    // })
 
     const description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore "
     
@@ -51,6 +51,8 @@ function Home(){
                         date='June 2, 2022'
                         />
                     ))}
+
+                    
                 </div>
 
             </div>
@@ -60,7 +62,7 @@ function Home(){
                 <h1>Upcoming Events/Gigs</h1>
                 <div className="event-card-container">
                     
-                    {eventList.map((value, key) =>{
+                    {/* {eventList.map((value, key) =>{
                         return(
                         <EventCard 
                         title= {value.eventName}
@@ -71,7 +73,35 @@ function Home(){
                         time="9PM - 5AM"
                         />
                         )
-                    })}
+                    })} */}
+                        
+
+                        <EventCard 
+                        title= "Friday Night Hitss"
+                        img={img}
+                        address="Baclod City"
+                        desc="The best night of your life"
+                        date="November 12, 2025"
+                        time="9PM - 5AM"
+                    />
+
+                    <EventCard 
+                        title= "Friday Night Hitss"
+                        img={img}
+                        address="Baclod City"
+                        desc="The best night of your life"
+                        date="November 12, 2025"
+                        time="9PM - 5AM"
+                    />
+
+                    <EventCard 
+                        title= "Friday Night Hitss"
+                        img={img}
+                        address="Baclod City"
+                        desc="The best night of your life"
+                        date="November 12, 2025"
+                        time="9PM - 5AM"
+                    />
                 </div>
             </div>
 

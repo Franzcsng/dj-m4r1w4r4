@@ -13,11 +13,12 @@ function SoundCard(prop) {
     const soundRef = useRef(null);
 
     const { 
-        soundSrc, 
+        soundSrc,
+        head='Played at',
         title: eventTitle, 
         date: eventDate, 
         address: eventAddress,
-        className='', 
+        id='', 
 
     } = prop;
 
@@ -66,8 +67,6 @@ function SoundCard(prop) {
         };
     }, [soundSrc]);
 
-
-
     const updateSeek = () => {
         const sound = soundRef.current;
         if (sound && sound.playing()) {
@@ -110,16 +109,39 @@ function SoundCard(prop) {
 
     return (
         
-        <div className={`sound-card-main ${className}`}>
+        <div className="sound-card-main" id={id}>
             <img src={soundBg} alt='mix-bg' />
 
             <div className='sound-overlay'>
-                <p>Played at</p>
+                <p>{head}</p>
                 <h3>{eventTitle}</h3>
                 <p id='mix-details'>{`${eventAddress} | ${eventDate}`}</p>
 
                 <div className='sound-controls-container'>
-                    <p className='timer'>{timer}</p>
+
+                    {id == 'mix-card' ? (
+                        <>
+                        <RewindIcon className='sound-btn rewind' onClick={() => {restartSound()}}/>
+                        <div className='play-btn'>
+                            <p>PLAY</p>
+
+                            <div className='btn'>
+                                {isPlaying ? 
+                                <PauseIcon className='sound-btn' onClick={() => {
+                                    isPlaying ? pauseSound() : playSound();
+                                }}/>
+                                : 
+                                <PlayIcon className='sound-btn' onClick={() => {
+                                    isPlaying ? pauseSound() : playSound();
+                                }}/>
+                                }
+                            </div>
+                        </div>
+
+                        </>
+                    ) : (
+                    <>
+                     <p className='timer'>{timer}</p>
 
                         <RewindIcon className='sound-btn rewind' onClick={() => {restartSound()}}/>
 
@@ -135,8 +157,12 @@ function SoundCard(prop) {
 
                         <RewindIcon className='sound-btn rewind hide'/>
                   
-
                     <p className='duration'>{duration}</p>
+                    </>
+                    )
+                    }
+
+                   
                 </div>
             </div>
         </div>

@@ -3,8 +3,8 @@
 .event-container{
     margin: auto;
     position: relative;
-    width: 400px;
-    height: 520px;
+    width: 320px;
+    height: 420px;
     background-color: aliceblue;
     border-radius: 10px;
     box-shadow: 0 0 25px rgb(69, 69, 69);
@@ -32,25 +32,25 @@
     hr{
         width: 90%;
         color: white;
-        border-top: 3px solid white;
+        border-top: 1px solid white;
     }
 
     h1{
-        margin: 30px auto 5px auto;
+        margin: 30px 10px 5px 10px;
         text-align: center;
-        font-size: 36px;
+        font-size: 30px;
         color: white;
     }
 
     .event-location{
-        font-size: 30px;
+        font-size: 24px;
         margin: 0 auto 10px auto;
     }
 
     .event-description{
         margin: 20px auto 10px auto;
         width: 90%;
-        font-size: 20px;
+        font-size: 16px;
     }
 
     span{
@@ -59,7 +59,7 @@
     }
 
     .event-date{
-        font-size: 20px;
+        font-size: 18px;
         width: 90%;
         margin: 25px auto 10px auto;
 
@@ -75,10 +75,19 @@
         transform: translateX(-50%);
 
         button{
-            width: 150px;
-            background-color: none;
-            height: 50px;
+            width: 120px;
+            background-color: rgba(0, 0, 0, 0);
+            height: 40px;
             margin: 10px;
+            color: white;
+            border: 3px solid white;
+            cursor: pointer;
+            transition: 0.3s;
+
+            &:hover{
+                background-color: white;
+                color: black;
+            }
         }
     }
 
