@@ -10,7 +10,7 @@ import {NavLink} from 'react-router-dom';
     return (
     <>
         <div className="main-header"> 
-
+        <div className='header-container'>
             <div className="header-logo">
                 <h1><span>dj</span> Mariwara</h1>
             </div>
@@ -32,6 +32,7 @@ import {NavLink} from 'react-router-dom';
                 <div></div>
             </div>
 
+        </div>
         </div>
         <SideBar isOpen={toggleSideBar}/> 
     </>

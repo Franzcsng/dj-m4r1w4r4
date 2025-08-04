@@ -12,11 +12,12 @@ function Hero (){
             <div className="hero-overlay">
 
                 <div className="hero-overlay-container">
-                    <h1 className="dj-name">m4r1w4r4</h1>
+                    
                     <img src={img2} alt="m4r1w4r4"></img>
 
                     <div className="dj-info">
-                        <h1>Professional Dj from the Philippines</h1>
+                        <h1 className="dj-name">m4r1w4r4</h1>
+                        <h3>Professional Dj from the Philippines</h3>
                         <p>m4r1w4r4 (aka Vinc Lang) is a Bacolod-based DJ and selector shaped by internet digging culture, known for intuitive, genre-fluid sets guided by the energy of the space and a deep curiosity for overlooked sounds.</p>
 
                         <button>Contact Us<div></div></button>

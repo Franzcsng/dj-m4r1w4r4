@@ -6,7 +6,10 @@ const AboutHome = () => {
     
     return (
         <div className="about-home-card">
-            <img src={aboutImg}></img>
+            <div className="img-container"> 
+                <img src={aboutImg}></img>
+            </div>
+            
             <div className="about-home-text">
                 <h1>About Me</h1>
                 <p>{text}</p>

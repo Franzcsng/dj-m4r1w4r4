@@ -6,13 +6,20 @@ $background-color: #000000c2;
     width: 100%;
     height: 100px;
     display: flex;
-    align-content: center;
-    justify-content: space-between;
     background-color: $background-color;
     z-index: 999;
     overflow: hidden;
 
-    .header-logo{
+    .header-container{
+        margin-inline: auto;
+        display: flex;
+        align-content: center;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 1600px;
+        height: 100%;
+
+        .header-logo{
         margin: auto 20px auto 20px;
         text-align: center;
 
@@ -89,6 +96,7 @@ $background-color: #000000c2;
            display: none;
         }
     }
+}
 
     @media only screen and (max-width: 810px) {
 
@@ -96,15 +104,16 @@ $background-color: #000000c2;
             height: 60px;
         }
         
-        .hamburger-nav{
-            display: flex;
+        .header-container{
+            .hamburger-nav{
+                display: flex;
 
-        }
+            }
 
-        .header-list{
-            display:none;
+            .header-list{
+                display:none;
+            }
         }
-        
     }
 
    

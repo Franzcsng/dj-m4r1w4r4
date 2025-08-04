@@ -35,7 +35,7 @@ function Home(){
 
                 <div className="home-text">
                     <h1>Beats by <span>m4r1w4r4</span></h1>
-                    <a>SoundCloud</a>
+                    <p>SoundCloud</p>
 
                     <MixCard/>
 
@@ -58,8 +58,9 @@ function Home(){
             </div>
 
             <div className="home-event-section">
-
-                <h1>Upcoming Events/Gigs</h1>
+                <div className="home-text">
+                    <h1>Upcoming Events/Gigs</h1>
+                </div>
                 <div className="event-card-container">
                     
                     {/* {eventList.map((value, key) =>{

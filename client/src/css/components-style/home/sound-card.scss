@@ -2,23 +2,23 @@
 
 .sound-card-main{
     position: relative;
-    background-color: rgb(254, 250, 222);
-    border-radius: 20px;
-    box-shadow: 0 0 10px rgb(163, 163, 163);
-    min-height: 280px;
-    max-height: 280px;
-    min-width: 220px;
-    margin: 10px 20px 10px 20px;
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    min-width: 120px;
+    height: 100%;
     transition: 0.5s;
     overflow: hidden;
+    align-self: center;
+    justify-self: center;
 
     img{
             position: absolute;
-            top: 0;
-            left: 0;
+            top: 5px;
+            left: 50%;
+            translate: -50%;
             object-fit: cover;
-            height: 100%;
-            border-radius: 20px;
+            height: 65%;
+            width: 95%;
             z-index: 1;
         }
 
@@ -26,7 +26,7 @@
         position: absolute;
         top: 0;
         left: 0;
-        background-color: rgba(0, 0, 0, 0.407);
+        background-color: rgba(0, 0, 0, 0.582);
         height: 100%;
         width: 100%;
         z-index: 2;
@@ -35,7 +35,7 @@
 
         p{
             width: 80%;
-            color: white;
+            color: $accent;
             margin-inline: auto;
             margin-top: 20px;
             margin-bottom: 0;
@@ -44,10 +44,11 @@
         #mix-details{
             margin-top: 5px;
             text-align: center;
+            color: $accent;
         }
         h3{
             width: 80%;
-            color: white;
+            color: $accent;
             margin-inline: auto;
             margin-top: 5px;
             margin-bottom: 0;
@@ -93,14 +94,14 @@
 
     }
 
-   
-   
+    // &:hover{
+    //     min-height: 300px;
+    //     min-width: 245px;
+    // }
 
-    &:hover{
-        min-height: 330px;
-        min-width: 265px;
-        box-shadow: 0 0 20px rgb(163, 163, 163);
-    }
+    // @media only screen and (max-width: 1200px) {
+    //     width: 100%;
+    // }
 }
 
 #mix-card{
