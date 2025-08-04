@@ -110,6 +110,7 @@ function SoundCard(prop) {
     return (
         
         <div className="sound-card-main" id={id}>
+            <div className='img-overlay'></div>
             <img src={soundBg} alt='mix-bg' />
 
             <div className='sound-overlay'>
@@ -143,7 +144,7 @@ function SoundCard(prop) {
                     <>
                      <p className='timer'>{timer}</p>
 
-                        <RewindIcon className='sound-btn rewind' onClick={() => {restartSound()}}/>
+                        <RewindIcon className='rewind' onClick={() => {restartSound()}}/>
 
                         {isPlaying ? 
                         <PauseIcon className='sound-btn' onClick={() => {
@@ -155,7 +156,7 @@ function SoundCard(prop) {
                         }}/>
                         }
 
-                        <RewindIcon className='sound-btn rewind hide'/>
+                        <RewindIcon className='rewind hide'/>
                   
                     <p className='duration'>{duration}</p>
                     </>

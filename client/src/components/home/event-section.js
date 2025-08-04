@@ -20,23 +20,32 @@ const EventCard = (prop) => {
         <>
             
             <div className="event-container">
+                
                 <img src={eventImg}></img>
 
                 <div className="event-overlay">
-                    <h1 className="event-title">{eventTitle}</h1>
-                    <p className="event-location">{eventAddress}</p>
-
-                    <hr></hr>
-
-                    <p className="event-description">
-                        {more ? eventDescription : `${preview} ...`} 
-                        {eventDescription.length > 150 && (
-                            <span onClick={toggleShowMore} style={{ cursor: 'pointer', color: 'blue' }}>
-                            {more ? ' show less' : ' show more'}
-                            </span>
-                        )}
-                    </p>
-                    <p className="event-date">{`${eventDate} | ${eventTime}`}</p>  
+                    <div className="event-grid">
+                        <div className='event-grid-child'>
+                            <h1 className="event-title">{eventTitle}</h1>
+                            <p className="event-location">{eventAddress}</p>
+                            <hr></hr>
+                        </div>
+                        
+                        <div className='event-grid-child'>
+                            <p className="event-description">
+                                {more ? eventDescription : `${preview} ...`} 
+                                {eventDescription.length > 150 && (
+                                    <span onClick={toggleShowMore} style={{ cursor: 'pointer', color: 'blue' }}>
+                                    {more ? ' show less' : ' show more'}
+                                    </span>
+                                )}
+                            </p>
+                        </div>
+                        
+                         <div className='event-grid-child'>
+                            <p className="event-date">{`${eventDate} | ${eventTime}`}</p>  
+                        </div>
+                    </div>
 
                     <div className="event-btns">
                         <button>Go</button>

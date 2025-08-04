@@ -1,3 +1,5 @@
+@import "../../variables.scss";
+
 $background-color: #000000c2;
 
 .main-header{
@@ -41,21 +43,19 @@ $background-color: #000000c2;
             color: white;
             text-decoration: none;
             padding: 5px 10px;
+            transition: 0.2s;
 
             &.active{
-                background-color: white;                
+                border: 2px solid $text-accent;             
                 border-radius: 10px;
-                color: rgb(255, 72, 0);
+                color: $text-accent;
                 font-weight: bold;
-
-                 &:hover{
-                    color: rgb(162, 89, 10);
-                 }
             }
         }
 
         a:hover{
-                color: yellow;
+                color: $text-accent;
+                font-weight: bold;
             }
     }
 

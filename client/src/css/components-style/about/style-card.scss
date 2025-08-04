@@ -1,32 +1,32 @@
 @import '../../variables.scss';
 
 .style-card{
-    width: 25%;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    padding-top: 5px;
+    padding-bottom: 5px;
     padding-inline: 20px;
     background-color: $text-accent;
     display: flex;
     text-align: center;
     justify-content: center;
-    margin: 10px;
+    margin: auto;
     border-radius: 10px;
 
     h2{
         color: $background;
-        font-size: 30px;
+        font-size: 24px;
         margin: 0;
     }
 
     @media only screen and (max-width: 850px){
-       width: 60%;
+       
         h2{
             font-size: 26px;
         }
     }
 
     @media only screen and (max-width:768px){
-        margin: 5px;
         h2{
             
             font-size: 20px;

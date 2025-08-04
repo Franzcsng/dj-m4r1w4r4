@@ -23,15 +23,40 @@
         margin: 0 30px 0 0;
         font-size: 32px;   
     }
-    p{
-        font-size: 16px;
+    a{
+        font-size: 18px;
+        text-decoration: underline;
+        color: $text-accent;
     }
+
+    #home-more-btn{
+        text-decoration: none;
+        color: $text-accent;
+        background-color: $background;
+        padding: 4px 7px 4px 7px;
+        border-radius: 10px;
+        font-weight: bold;
+        border: 3px solid $text-accent;
+        transition: 0.3s;
+
+        &:hover{
+            color: $background;
+            background-color: $text-accent;
+        }
+    }
+
+    @media only screen and (max-width: 850px) {
+            h1{
+                font-size: 24px; 
+            }   
+        }
    }
 }
 
 .home-divider{
  height: 5px;
  width: 100%;
+ border: none;
  background-color: $background;
 }
 
@@ -69,7 +94,7 @@
     }
 
     @media only screen and (max-width: 550px) {
-        height: 360px;
+        height: 460px;
     }
    }
    
@@ -88,6 +113,9 @@
 
    .home-text{
         margin-bottom: 40px;
+
+        
+
     }
 
     .event-card-container{
@@ -107,24 +135,32 @@
         }
 
         @media only screen and (max-width: 850px) {
-            height: 560px;
+            height: 680px;
             grid-template-columns: 1fr;
             grid-template-rows: repeat(3, 1fr);
+        }
+
+        @media only screen and (max-width: 450px) {
+            height: 780px;
+            
         }
    
     }
 }
 
 .home-about-container{
-    width: 100%;
+    border: 3px solid $text-accent;
+    border-radius: 40px;
+    width: 90%;
     max-width: 1000px;
-    margin: auto;
+    margin: 10px 30px 40px 30px;
     padding-top: 30px;
-    padding-bottom: 80px;
+    padding-bottom: 40px;
     padding-inline: 30px;
     box-sizing: border-box;
     height: auto;
     display: flex;
+    align-self: center;
     flex-direction: column;
     justify-content: center;
     align-items: center;

@@ -34,10 +34,10 @@ function Home(){
             <div className="home-section">
 
                 <div className="home-text">
-                    <h1>Beats by <span>m4r1w4r4</span></h1>
-                    <p>SoundCloud</p>
-
-                    <MixCard/>
+                    <h1>My Mixes</h1>
+                    <a id="home-link-btn">SoundCloud</a>
+                    <a id="home-more-btn">view more</a>
+                    
 
                 </div>
 
@@ -60,6 +60,7 @@ function Home(){
             <div className="home-event-section">
                 <div className="home-text">
                     <h1>Upcoming Events/Gigs</h1>
+                    <a id="home-more-btn">view more</a>
                 </div>
                 <div className="event-card-container">
                     

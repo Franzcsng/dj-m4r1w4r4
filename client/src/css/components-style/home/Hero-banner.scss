@@ -1,4 +1,4 @@
-
+@import '../../variables';
 
 .hero-banner{
     position: relative;
@@ -18,7 +18,7 @@
 
     .hero-overlay{
     position: absolute;
-    background-color: rgba(0, 0, 0, 0.266);
+    background-color: rgba(0, 0, 0, 0.73);
     width: 100%;
     height: 100%;
     top: 0;
@@ -81,28 +81,20 @@
             }
 
             button{
+                background-color: transparent;
                 width: 170px;
                 height: 40px;
                 border-radius: 20px;
-                border: none;
-                margin-top: 30px;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
+                border: 3px solid $accent;
+                margin-top: 30px;      
                 font-size: 16px;
-                padding-left: 30px;
                 transition: 0.2s;
+                color: $accent;
                 cursor: pointer;
-
-                div{
-                    height: 30px;
-                    width: 30px;
-                    background-color: rgb(57, 6, 6);
-                    border-radius: 50%;
-                }
+                font-weight: bold;
 
                 &:hover{
-                    background-color: rgb(255, 252, 206);
+                    background-color: $accent;
                     color: rgb(21, 16, 16);
                     font-weight: bold;
                 }

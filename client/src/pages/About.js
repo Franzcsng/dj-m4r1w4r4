@@ -31,6 +31,8 @@ const About = (img='../images/about/about_mrwra.JPG', djDesc='DJ m4riw4r4 - Chil
                 <StyleCard style='KPOP'/>
                 <StyleCard style='KPOP'/>
                 
+                
+                
 
                 </div>
             </div>

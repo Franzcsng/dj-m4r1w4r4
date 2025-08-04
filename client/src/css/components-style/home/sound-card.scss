@@ -1,24 +1,35 @@
 @import '../../variables.scss';
 
 .sound-card-main{
+    
     position: relative;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(218, 120, 35);
     width: 100%;
     min-width: 120px;
     height: 100%;
     transition: 0.5s;
+    border-radius: 10px;
     overflow: hidden;
     align-self: center;
     justify-self: center;
+    
 
+    .img-overlay{
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.582);
+        top: 0;
+        left: 0%;
+        height: 70%;
+        width: 100%;
+        z-index: 2;
+    }
     img{
             position: absolute;
-            top: 5px;
-            left: 50%;
-            translate: -50%;
+            top: 0;
+        left: 0%;
             object-fit: cover;
-            height: 65%;
-            width: 95%;
+            height: 70%;
+            width: 100%;
             z-index: 1;
         }
 
@@ -26,12 +37,12 @@
         position: absolute;
         top: 0;
         left: 0;
-        background-color: rgba(0, 0, 0, 0.582);
         height: 100%;
         width: 100%;
         z-index: 2;
         display: flex;
         flex-direction: column;
+       
 
         p{
             width: 80%;
@@ -73,18 +84,19 @@
             p{
                 margin: 0;
                 width: auto;
+                color: $accent-light;
             }
 
 
             .sound-btn{
-                width: 50px;
-                height: 50px;
-                color: white;
+                max-width: 55px;
+                max-height: 55px;
+                color: $accent-light;
             }
 
-             .sound-btn.rewind{
-                height: 20px;
-
+             .rewind{
+                max-height: 20px;
+                color: $accent-light;
                 &.hide{
                     opacity: 0;
                 }
@@ -99,9 +111,44 @@
     //     min-width: 245px;
     // }
 
-    // @media only screen and (max-width: 1200px) {
-    //     width: 100%;
-    // }
+    @media only screen and (max-width: 1100px) {
+        .sound-overlay{
+            .sound-controls-container{
+                width: 90%;
+            p{
+                font-size: 12px;
+            }
+             .sound-btn{
+                max-width: 40px;
+                max-height: 40px;
+            }
+             .rewind{
+                max-height: 20px;
+             }
+            }
+        }
+        
+    }
+
+    @media only screen and (max-width: 580px) {
+        .sound-overlay{
+            .sound-controls-container{
+                width: 80%;
+                bottom: 10px;
+
+                p{
+                    display: none;
+                }
+                .sound-btn{
+                    max-width: 50px;   
+                    max-height: 50px;
+                }
+                .rewind{
+                    
+                }
+                }
+        }
+    }
 }
 
 #mix-card{
