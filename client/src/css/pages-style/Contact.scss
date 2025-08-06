@@ -32,9 +32,11 @@
         .contact-box{
             width: 100%;
             flex: 2;
-            height: 500px;
+            height: auto;
             background-color: $text-accent;
-            margin-inline: 10px;
+            padding: 30px 30px 50px 30px;
+            box-sizing: border-box;
+            margin: 5px;
             border-radius: 15px;
             display: flex;
             flex-direction: column;
@@ -42,19 +44,20 @@
                h2{
                     width: 80%;
                     font-size: 70px;
-                    margin: 30px auto 0 auto;
+                    margin: 0;
                     color: $background;
                 }
 
                 p{
                     font-size: 20px;
                     width: 80%;
-                    margin: 10px auto 0 auto;
+                    margin: 10px 0;
                     color: $background;
                 }
         }
 
         .socials-container{
+            margin: 5px;
             width: 100%;
             flex: 1;
             display: flex;
@@ -64,26 +67,25 @@
                 display: flex;
                 justify-content: space-evenly;
                 align-items: center;
-                width: 100%;
-                height: 100px;
                 background-color: $text-accent;
                 border-radius: 15px;
                 margin-bottom: 20px;
-                margin-inline: 10px;
+                padding: 2px 10px 2px 10px;
+                box-sizing: border-box;
                 box-shadow: 0 0 10px rgb(56, 56, 56);
 
                 .icon{
-                    width: 60px;
+                    width: 50px;
                     color: $background;
-                    margin: 15px;
+                    margin-inline: 5px;
+                    
                 }
                
                 p{
                     font-size: 25px;
                     color: $background;
                     font-weight: bold;
-                    margin: 15px;
-
+                    margin-inline: 5px;
                 }
             }
         }
@@ -92,7 +94,7 @@
 
 }
 
-  @media only screen and (max-width: 840px) {
+  @media only screen and (max-width: 810px) {
 
         .contact-main{
             padding-top: 100px;
@@ -105,9 +107,7 @@
             
 
             .contact-box{
-                margin-inline: 0px ;
                 width: 100%;
-                height: 400px;
                 flex: none;
 
                 h2{
@@ -124,16 +124,14 @@
                 justify-content: space-between;
                 width: 100%;
                 margin-top: 20px;
-                flex: none;
                 flex-direction: row ;
 
                 .social{
-                    margin: 0px ;
                     width: 32%;
                     height: 120px;
 
                     .icon{
-                        width: 80px;
+                        width: 50px;
             }
                     p{
                         display: none;

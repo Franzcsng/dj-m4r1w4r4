@@ -1,7 +1,9 @@
 import '../css/pages-style/About.scss'
 import StyleCard from '../components/about/style-card.js';
 import EventList from '../components/about/event-list.js';
+import EventGallery from '../components/about/event-gallery.js'
 import img_about from "../images/about/about_mrwra.JPG"
+
 const desc = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore';
 
 
@@ -41,10 +43,10 @@ const About = (img='../images/about/about_mrwra.JPG', djDesc='DJ m4riw4r4 - Chil
                 <hr></hr>
             </div>
 
-            <div className="about-section"> 
+            <div className="about-section gallery"> 
                 <h2 className="abt-sub-header">Where I've Been</h2>
 
-            
+                <EventGallery/>
                 <EventList/>
 
             </div>

@@ -14,6 +14,8 @@ const Contact = () =>{
                 <div className='contact-box'>
                     <h2>Contact me.</h2>
                     <p>For bookings, collaborations, media inquiries, or just good vibes — drop a message and I’ll get back to you. Let’s make something unforgettable together.</p>
+                    <p>091341451234</p>
+                    <p>vinclang@gmail.com</p>
                 </div>
 
 
