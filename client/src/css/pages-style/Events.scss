@@ -1,0 +1,35 @@
+@import "../variables.scss";
+
+.events-main{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    max-height: auto;
+    background-color: $background;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .events-section{
+        width: 100%;
+        height: auto;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .section-header{
+            width: 70%;
+            max-width: 1400px;
+            margin-inline: auto;
+            height: auto;
+            color: $text-accent;
+
+            h2{
+                margin: 0;
+            }
+        }
+    }
+
+}

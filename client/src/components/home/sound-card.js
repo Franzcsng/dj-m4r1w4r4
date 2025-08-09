@@ -114,18 +114,17 @@ function SoundCard(prop) {
             <img src={soundBg} alt='mix-bg' />
 
             <div className='sound-overlay'>
-                <p>{head}</p>
+                <p className='header'>{head}</p>
                 <h3>{eventTitle}</h3>
                 <p id='mix-details'>{`${eventAddress} | ${eventDate}`}</p>
 
                 <div className='sound-controls-container'>
 
-                    {id == 'mix-card' ? (
+                    {id === 'mix-card' ? (
                         <>
                         <RewindIcon className='sound-btn rewind' onClick={() => {restartSound()}}/>
                         <div className='play-btn'>
                             <p>PLAY</p>
-
                             <div className='btn'>
                                 {isPlaying ? 
                                 <PauseIcon className='sound-btn' onClick={() => {

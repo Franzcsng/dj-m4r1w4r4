@@ -2,10 +2,72 @@
 
 .mixes-main{
     width: 100%;
-    height: 100vh;
+    height: auto;
     background-color: $background;
     display: flex;
     flex-direction: column;
+
+
+    .mix-section{
+        padding: 5px;
+        width: 100%;
+        height: auto;   
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-sizing: border-box;
+
+        .mix-section-header{
+            width: 70%;
+            max-width: 1400px;
+            height: auto;
+
+            span{
+                border: 2px solid $text-accent;
+                border-radius: 10px;
+                padding: 4px 10px;
+                margin-right: 10px;
+            }
+            p{
+                color: $text-accent;
+                font-size: 20px;
+                font-weight: bold;
+                line-height: 35px;
+            }
+        }
+
+        .mix-grid{
+            width: 70%;
+            max-width: 1400px;
+            display: grid;
+            padding-top: 20px;
+            padding-bottom: 90px;
+            grid-template-columns: repeat(4, minmax( 180px, 300px));
+            grid-auto-rows: minmax(280px, auto);
+            column-gap: 20px;
+            row-gap: 30px;
+        }
+
+        @media only screen and (max-width: 1100px) {
+
+            .mix-section-header{
+                width: 90%;
+            }
+
+            .mix-grid{
+                width: 90%;
+                grid-template-columns: repeat(3, minmax( 120px, auto));
+                grid-auto-rows: minmax(250px, auto);
+
+                @media only screen and (max-width: 550px) {
+                    grid-template-columns: repeat(2, minmax( 120px, auto));
+                }
+            }
+                
+            }
+    }
+
+     
 }
 
 //mix-hero

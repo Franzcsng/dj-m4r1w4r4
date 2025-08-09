@@ -111,7 +111,7 @@
     //     min-width: 245px;
     // }
 
-    @media only screen and (max-width: 1100px) {
+    @media only screen and (max-width: 1250px) {
         .sound-overlay{
             .sound-controls-container{
                 width: 90%;
@@ -152,52 +152,56 @@
 }
 
 #mix-card{
-        min-width: 330px;
-        min-height: 420px;
+    border: 3px solid $text-accent ;
+       width: 70%;
+       min-width: 300px;
+       height: 100%;
+       min-height: 350px;
+       justify-self: center;
+       border-radius: 30px;
 
+        .img-overlay{
+            height: 100%;
+        }
         img{
             width: 100%;
+            height: 100%;
         }
 
         .sound-overlay{
             width: 100%;
             background-color: rgba(0, 0, 0, 0.632);
-            p{
-                font-size: 50px;
-                width: 50px;
-                float: right;
-                text-align: right;
+            padding: 10px;
+            display: flex;
+            box-sizing: border-box;
+
+            .header{
+                font-size: 40px;
                 color: $text-accent;
                 font-weight: bold;
-                margin-inline: no0ne;
+                margin-inline: 20px;
             }   
 
             #mix-details{
-                margin-top: 5px;
-                font-size: 20px;
-                width: 80%;
-                text-align: left;
-                color: $accent;
+                display: none;
             }
+
             h3{
-                width: 80%;
                 color: white;
-                margin-top: 100px;
                 margin-bottom: 0;
-                font-size: 30px;
-                text-align: left;
+                font-size: 50px;
+                text-align: center;
             }
         }
 
         .sound-controls-container{
-            justify-content: center;
-
-            
+            justify-content: space-evenly;
 
             .play-btn{
+            
             width: 160px;
             height: 50px;
-            background-color: $accent;
+            background-color: $text-accent;
             border-radius: 30px;
             display: flex;
             flex-direction: row;
@@ -208,13 +212,16 @@
                 font-size: 25px;
                 margin-top: 0;
                 margin-bottom: 0;
+                color: $background;
+                font-weight: bold;
                 
             }
 
             .sound-btn{
                 width: 30px;
                 height: 30px;
-                margin: 0;
+                margin: 0px;
+                color: $background;
             }
         }
         }

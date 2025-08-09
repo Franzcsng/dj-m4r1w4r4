@@ -8,7 +8,7 @@ const MixHero = () => {
             <div className='mix-banner-container'>
                 <div className='mix-banner-info'>
                     <h1>
-                        Listen to my Beats
+                        Check out my Beats
                     </h1>
 
                     <p>

@@ -13,6 +13,7 @@ import Home from './pages/Home.js';
 import About from './pages/About.js';
 import Contact from './pages/Contact.js';
 import Mixes from './pages/Mixes.js';
+import Events from './pages/Events.js'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -22,6 +23,7 @@ const router = createBrowserRouter(
     <Route path="about" element={<About/>}/>
     <Route path="contact" element={<Contact/>}/>
     <Route path="mixes" element={<Mixes/>}/>
+    <Route path="events" element={<Events/>}/>
   </Route>)
 );
 
