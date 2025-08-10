@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router()
-const { Mixes } = require('../modules')
+const { Mixes } = require('../models')
 
 
 router.get('/', async (req, res) => {
@@ -8,5 +8,10 @@ router.get('/', async (req, res) => {
     res.json(allMixes)
 })
 
+router.post('/', async (req, res) => {
+    const mix = req.body
+    await Mixes.create(mix)
+    res.json(mix)
+})
 
 module.exports = router

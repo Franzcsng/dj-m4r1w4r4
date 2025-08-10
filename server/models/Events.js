@@ -22,7 +22,16 @@ module.exports = (sequelize, DataTypes) => {
         eventDetails: {
             type: DataTypes.STRING,
             allowNull: true
+        },
+        eventDetailsShort: {
+            type: DataTypes.STRING,
+            allowNull: true
+        },  
+        eventLink: {
+            type: DataTypes.STRING,
+            allowNull: true
         }
+
 
         }
     )

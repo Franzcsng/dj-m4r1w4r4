@@ -1,4 +1,4 @@
-module.exports = (sequelize, DataTypes) =>{
+module.exports = (sequelize, DataTypes) => {
 
     const Mixes = sequelize.define("Mixes",
         {
@@ -22,7 +22,5 @@ module.exports = (sequelize, DataTypes) =>{
         }   
 
     )
-
-
     return Mixes
 }

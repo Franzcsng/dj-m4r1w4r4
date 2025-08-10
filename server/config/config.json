@@ -1,8 +1,8 @@
 {
   "development": {
     "username": "root",
-    "password": null,
-    "database": "m4r1w4r4_db",
+    "password": "",
+    "database": "mariwara_db",
     "host": "localhost",
     "dialect": "mysql"
   },

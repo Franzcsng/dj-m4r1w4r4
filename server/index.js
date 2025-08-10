@@ -10,11 +10,10 @@ const db = require("./models");
 
 
 const eventsRouter = require('./routes/Events.js')
-const mixesRouter = require('../modules/Mixes.js')
-//
+const mixesRouter = require('./routes/Mixes.js')
+
 app.use("/events", eventsRouter)
 app.use("/mixes", mixesRouter)
-
 
 
 db.sequelize.sync().then(() =>{
