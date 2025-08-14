@@ -14,10 +14,10 @@ function SoundCard(prop) {
 
     const { 
         soundSrc,
-        head='Played at',
-        title: eventTitle, 
+        head='Mix',
+        title: mixTitle, 
         date: eventDate, 
-        address: eventAddress,
+        event='',
         id='', 
 
     } = prop;
@@ -115,8 +115,8 @@ function SoundCard(prop) {
 
             <div className='sound-overlay'>
                 <p className='header'>{head}</p>
-                <h3>{eventTitle}</h3>
-                <p id='mix-details'>{`${eventAddress} | ${eventDate}`}</p>
+                <h3>{mixTitle}</h3>
+                <p id='mix-details'>{event ? `${event} | ${eventDate}` : `${eventDate}`}</p>
 
                 <div className='sound-controls-container'>
 
