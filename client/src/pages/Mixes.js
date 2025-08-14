@@ -1,9 +1,23 @@
 import '../css/pages-style/Mixes.scss'
 import MixHero from '../components/mixes/mix-hero.js'
 import SoundCard from '../components/home/sound-card.js'
+import axios from 'axios'
+import {useEffect, useState} from 'react'
 
 
 const Mixes = () => {
+    const [listOfMixes, setListOfMixes ] = useState([]);
+
+    useEffect(() =>{
+        try{
+            axios.get("http://localhost:3001/mixes").then((response) => {
+            setListOfMixes(response.data);
+        });
+        } catch (e) {
+            console.log(e.message);
+        }
+    }, [])
+
     return (
         <div className='mixes-main'>
             <MixHero/>
@@ -16,9 +30,9 @@ const Mixes = () => {
                 </div>
 
                 <div className='mix-grid'>
-                    {[...Array(8)].map((_, i) =>(
+                    {listOfMixes.map((mix, i) =>(
                         <SoundCard key={i} 
-                        title='Crazy Times' 
+                        title={mix.mixTitle} 
                         address='Aces Bar' 
                         date='June 2, 2022'
                         />
