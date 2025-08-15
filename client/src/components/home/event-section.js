@@ -6,20 +6,21 @@ import { useState } from 'react';
 const EventCard = (prop) => {
     const [more, setMore] = useState(false);
     const toggleShowMore = () => setMore((state) => !state) 
-   
+    
     let eventTitle = prop.title;
     let eventImg = prop.img;
     let eventAddress = prop.address;
     let eventDescription = prop.desc;
     let eventDate = prop.date;
     let eventTime = prop.time;
+    let customClass = prop.customClass;
 
     const preview = eventDescription ? eventDescription.slice(0, 295) : '';
 
     return (
         <>
             
-            <div className="event-container">
+            <div className={`event-container ${customClass}`}>
                 
                 <img src={eventImg}></img>
 

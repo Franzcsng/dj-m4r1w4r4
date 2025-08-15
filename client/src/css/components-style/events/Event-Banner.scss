@@ -6,7 +6,6 @@
     min-height: 650px;
     background-color: rgb(33, 33, 33);
 
-
     .banner-overlay{
         position: absolute;
         inset: 0;
@@ -111,6 +110,11 @@
                     grid-column: 3 / 6;
                 }
             }
+
+             @media screen and (max-width: 810px){
+                margin-top: 100px;
+            }
+           
         }
 
     }

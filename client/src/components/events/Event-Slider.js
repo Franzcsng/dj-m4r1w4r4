@@ -33,11 +33,27 @@ const EventSlider = () => {
             modules={[Navigation, Pagination]} className="mySwiper">
                 
             
+            <SwiperSlide>
+                <EventCard 
+                        title= "Event Name Krazy"
+                        address="Bacolod City"
+                        desc="The Aurora Night Festival lit up the heart of the city with a dazzling fusion of lights, music, and community spirit. As the sun dipped below the skyline, strings of colorful lanterns illuminated the streets, guiding visitors toward the central plaza. Local artisans showcased their creations infhdrhdnb"
+                        date="January 2, 2024"
+                        time="9PM - 5AM"
+                        customClass="slider-card"
+                        />
+            </SwiperSlide>
 
-            <SwiperSlide className='swiper-slide'><EventCard desc='aef'/></SwiperSlide>
-            <SwiperSlide><EventCard desc='aef'/></SwiperSlide>
-            <SwiperSlide><EventCard desc='aef'/></SwiperSlide>
-            <SwiperSlide><EventCard desc='aef'/></SwiperSlide>
+            <SwiperSlide>
+                <EventCard 
+                        title= "Event Name Krazy"
+                        address="Bacolod City"
+                        desc="The Aurora Night Festival lit up the heart of the city with a dazzling fusion of lights, music, and community spirit. As the sun dipped below the skyline, strings of colorful lanterns illuminated the streets, guiding visitors toward the central plaza. Local artisans showcased their creations infhdrhdnb"
+                        date="January 2, 2024"
+                        time="9PM - 5AM"
+                        customClass="slider-card"
+                        />
+            </SwiperSlide>
 
             </Swiper>
  
