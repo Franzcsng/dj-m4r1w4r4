@@ -30,13 +30,16 @@ const Mixes = () => {
                 </div>
 
                 <div className='mix-grid'>
+
                     {listOfMixes.map((mix, i) =>(
                         <SoundCard key={i} 
+                        soundSrc ={mix.mixSrc}
                         title={mix.mixTitle} 
-                        address='Aces Bar' 
                         date='June 2, 2022'
+                        event = {mix.mixEvent} 
                         />
                     ))}
+                    
                 </div>
 
             </div>

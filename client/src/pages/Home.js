@@ -7,6 +7,7 @@ import MixCard from '../components/mixes/mix-card.js';
 import img from '../images/banner/hero_1.jpg';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+import { NavLink } from 'react-router-dom'
 
 function Home(){
     const formatDate = (dateString) => {
@@ -18,11 +19,11 @@ function Home(){
     };
     const [eventList, setEventList] = useState([]);
 
-    // useEffect(() =>{
-    //     axios.get("http://localhost:3001/events").then((response) =>{
-    //         setEventList(response.data)
-    //     })
-    // })
+    useEffect(() =>{
+        axios.get("http://localhost:3001/events").then((response) =>{
+            setEventList(response.data)
+        })
+    }, [])
 
     const description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore "
     
@@ -36,8 +37,10 @@ function Home(){
                 <div className="home-text">
                     <h1>My Mixes</h1>
                     <a id="home-link-btn">SoundCloud</a>
+
+                    <NavLink to='/mixes'>
                     <a id="home-more-btn">view more</a>
-                    
+                    </NavLink>
 
                 </div>
 
@@ -60,50 +63,27 @@ function Home(){
             <div className="home-event-section">
                 <div className="home-text">
                     <h1>Upcoming Events/Gigs</h1>
+                    <NavLink to='/events'>
                     <a id="home-more-btn">view more</a>
+                    </NavLink>
                 </div>
                 <div className="event-card-container">
                     
-                    {/* {eventList.map((value, key) =>{
+                    {eventList.map((value, key) =>{
                         return(
+                        
                         <EventCard 
                         title= {value.eventName}
                         img={img}
                         address={value.eventAddress}
-                        desc={value.eventDetails}
+                        desc="The Aurora Night Festival lit up the heart of the city with a dazzling fusion of lights, music, and community spirit. As the sun dipped below the skyline, strings of colorful lanterns illuminated the streets, guiding visitors toward the central plaza. Local artisans showcased their creations infhdrhdnb"
                         date={formatDate(value.eventDate)}
                         time="9PM - 5AM"
                         />
+                       
                         )
-                    })} */}
-                        
-
-                        <EventCard 
-                        title= "Friday Night Hitss"
-                        img={img}
-                        address="Baclod City"
-                        desc="The best night of your life"
-                        date="November 12, 2025"
-                        time="9PM - 5AM"
-                    />
-
-                    <EventCard 
-                        title= "Friday Night Hitss"
-                        img={img}
-                        address="Baclod City"
-                        desc="The best night of your life"
-                        date="November 12, 2025"
-                        time="9PM - 5AM"
-                    />
-
-                    <EventCard 
-                        title= "Friday Night Hitss"
-                        img={img}
-                        address="Baclod City"
-                        desc="The best night of your life"
-                        date="November 12, 2025"
-                        time="9PM - 5AM"
-                    />
+                    })}
+                    
                 </div>
             </div>
 

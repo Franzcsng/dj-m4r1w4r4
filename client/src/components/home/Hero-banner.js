@@ -1,5 +1,6 @@
 
 import '../../css/components-style/home/Hero-banner.scss';
+import {NavLink} from 'react-router-dom';
 import img1 from '../../images/banner/hero_1.jpg';
 import img2 from '../../images/banner/banner_dj.png';
 
@@ -20,7 +21,9 @@ function Hero (){
                         <h3>Professional Dj from the Philippines</h3>
                         <p>m4r1w4r4 (aka Vinc Lang) is a Bacolod-based DJ and selector shaped by internet digging culture, known for intuitive, genre-fluid sets guided by the energy of the space and a deep curiosity for overlooked sounds.</p>
 
-                        <button>Contact Us<div></div></button>
+                        <NavLink to='/contact'>
+                            <button>Contact Us</button>
+                        </NavLink>
                     </div>
 
                 </div>

@@ -14,7 +14,7 @@ const EventCard = (prop) => {
     let eventDate = prop.date;
     let eventTime = prop.time;
 
-    const preview = eventDescription ? eventDescription.slice(0, 150) : '';
+    const preview = eventDescription ? eventDescription.slice(0, 295) : '';
 
     return (
         <>
@@ -33,12 +33,8 @@ const EventCard = (prop) => {
                         
                         <div className='event-grid-child'>
                             <p className="event-description">
-                                {more ? eventDescription : `${preview} ...`} 
-                                {eventDescription.length > 150 && (
-                                    <span onClick={toggleShowMore} style={{ cursor: 'pointer', color: 'blue' }}>
-                                    {more ? ' show less' : ' show more'}
-                                    </span>
-                                )}
+            
+                                {eventDescription.length > 295 ? `${preview} ...` : eventDescription}
                             </p>
                         </div>
                         
@@ -48,7 +44,6 @@ const EventCard = (prop) => {
                     </div>
 
                     <div className="event-btns">
-                        <button>Go</button>
                         <button>View More</button>
                     </div>  
                 </div>

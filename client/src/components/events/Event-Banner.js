@@ -1,4 +1,5 @@
 import '../../css/components-style/events/Event-Banner.scss'
+import {NavLink} from 'react-router-dom';
 import aboutImg from '../../images/about/about_mrwra.JPG';
 
 const EventBanner = () => {
