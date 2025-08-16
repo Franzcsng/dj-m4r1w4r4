@@ -1,12 +1,19 @@
 import '../../css/components-style/home/event-section.scss';
 import img from '../../images/banner/hero_1.jpg';
 import { useState } from 'react';
+import {useNavigate  } from 'react-router-dom'
 
 
 const EventCard = (prop) => {
     const [more, setMore] = useState(false);
     const toggleShowMore = () => setMore((state) => !state) 
+
+    let navigate = useNavigate ()
+    const goToEvent = (id) => {
+        navigate(`/events/${id}`); // replaces history.push
+    };
     
+    let eventId = prop.id
     let eventTitle = prop.title;
     let eventImg = prop.img;
     let eventAddress = prop.address;
@@ -45,7 +52,7 @@ const EventCard = (prop) => {
                     </div>
 
                     <div className="event-btns">
-                        <button>View More</button>
+                        <button onClick={() => {goToEvent(eventId)}}>View More</button>
                     </div>  
                 </div>
 

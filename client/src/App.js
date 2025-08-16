@@ -14,6 +14,7 @@ import About from './pages/About.js';
 import Contact from './pages/Contact.js';
 import Mixes from './pages/Mixes.js';
 import Events from './pages/Events.js'
+import Event from './pages/Event.js'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -24,6 +25,7 @@ const router = createBrowserRouter(
     <Route path="contact" element={<Contact/>}/>
     <Route path="mixes" element={<Mixes/>}/>
     <Route path="events" element={<Events/>}/>
+    <Route path="events/:id" element={<Event/>}/>
   </Route>)
 );
 
