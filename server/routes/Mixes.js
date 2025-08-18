@@ -4,8 +4,13 @@ const { Mixes } = require('../models')
 
 
 router.get('/', async (req, res) => {
-    const allMixes = await Mixes.findAll()
-    res.json(allMixes)
+    try{
+        const allMixes = await Mixes.findAll()
+        res.json(allMixes)
+    } catch (error){
+        console.log(error.message)
+    }
+    
 })
 
 router.post('/', async (req, res) => {
