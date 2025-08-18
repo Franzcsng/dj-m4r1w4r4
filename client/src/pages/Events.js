@@ -6,7 +6,7 @@ import EventCard from '../components/home/event-section.js';
 import EventSlider from '../components/events/Event-Slider.js'
 import EventBanner from '../components/events/Event-Banner.js'
 
-const Evemts = () => {
+const Events = () => {
 
     const formatDate = (dateString) => {
     return new Date(dateString).toLocaleDateString('en-US', {
@@ -22,6 +22,7 @@ const Evemts = () => {
                 setEventList(response.data)
             })
         }, [])
+        
     return(
         <div className='events-main'>
             <EventBanner/>
@@ -42,7 +43,9 @@ const Evemts = () => {
                     {eventList.map((value, key) =>{
                         return(
                         <>
-                            <EventCard 
+                        
+                        <EventCard 
+                        id={value.eventId}
                         title= {value.eventName}
                         address={value.eventAddress}
                         desc="The Aurora Night Festival lit up the heart of the city with a dazzling fusion of lights, music, and community spirit. As the sun dipped below the skyline, strings of colorful lanterns illuminated the streets, guiding visitors toward the central plaza. Local artisans showcased their creations infhdrhdnb"
@@ -50,10 +53,7 @@ const Evemts = () => {
                         time="9PM - 5AM"
                         />
                         </>
-                        
 
-                        
-                       
                         )
                     })}
                 </div>
@@ -63,4 +63,4 @@ const Evemts = () => {
     )
 }
 
-export default Evemts
+export default Events

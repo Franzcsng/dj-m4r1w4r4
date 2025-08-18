@@ -9,7 +9,13 @@ import EventCard from '../components/home/event-section.js'
 
 
 const Event = () =>{
-
+    const formatDate = (dateString) => {
+    return new Date(dateString).toLocaleDateString('en-US', {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+        });
+    };
 
     let { id } = useParams();
 
@@ -50,8 +56,8 @@ const Event = () =>{
                         {event.eventName}
                     </h1>
 
-                    <h2>{event.eventAddress}zsdvgsdbvrf</h2>
-                    <h2>{event.eventDate}</h2>
+                    <h2>{event.eventAddress}</h2>
+                    <h2>{formatDate(event.eventDate)}</h2>
 
 
                 </div>
@@ -87,7 +93,7 @@ const Event = () =>{
                     <div className='event-contact'>
 
                             <h1 className='section-header'>
-                            Interested? Check them out 
+                             Check them out 
                             </h1>
 
                             <div className='socials'>
@@ -111,18 +117,16 @@ const Event = () =>{
 
                     {events.map((value, key) =>{
                         return(
-                     
                         
                         <EventCard key={value.eventId}
                         id={value.eventId}
                         title= {value.eventName}
                         address={value.eventAddress}
                         desc="The Aurora Night Festival lit up the heart of the city with a dazzling fusion of lights, music, and community spirit. As the sun dipped below the skyline, strings of colorful lanterns illuminated the streets, guiding visitors toward the central plaza. Local artisans showcased their creations infhdrhdnb"
-                        date={value.eventDate}
+                        date={formatDate(value.eventDate)}
                         time="9PM - 5AM"
                         />
                     
-
                         )
                     })}
                 </div>       
