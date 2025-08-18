@@ -8,7 +8,6 @@ app.use(express.json())
 
 const db = require("./models");
 
-
 const eventsRouter = require('./routes/Events.js')
 const mixesRouter = require('./routes/Mixes.js')
 
