@@ -71,8 +71,9 @@ function Home(){
                     
                     {eventList.map((value, key) =>{
                         return(
-                        
-                        <EventCard 
+                        <>
+                            <EventCard 
+                        id={value.eventId}
                         title= {value.eventName}
                         img={img}
                         address={value.eventAddress}
@@ -80,7 +81,9 @@ function Home(){
                         date={formatDate(value.eventDate)}
                         time="9PM - 5AM"
                         />
-                       
+
+                        </>
+                        
                         )
                     })}
                     
