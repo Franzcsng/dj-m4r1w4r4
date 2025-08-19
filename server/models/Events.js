@@ -19,20 +19,19 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.DATE,
             allowNull: false
         },
-        eventDetails: {
+        eventTime: {
+            type: DataTypes.STRING,
+            allowNull: false
+        },
+        eventDescription: {
             type: DataTypes.STRING,
             allowNull: true
         },
-        eventDetailsShort: {
-            type: DataTypes.STRING,
-            allowNull: true
-        },  
-        eventLink: {
-            type: DataTypes.STRING,
-            allowNull: true
+        featuredEvent: {
+            type: DataTypes.BOOLEAN,
+            defaultValue: false,
+            allowNull: false
         }
-
-
         }
     )
 
