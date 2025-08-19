@@ -15,9 +15,14 @@ module.exports = (sequelize, DataTypes) => {
                 type: DataTypes.STRING,
                 allowNull: false
             },
-            mixEvent: {
+            playedAt: {
                 type: DataTypes.STRING,
                 allowNull: true
+            },
+            featuredMix: {
+                type: DataTypes.BOOLEAN,
+                defautlValue: false,
+                allowNull: false
             }
         }   
 
